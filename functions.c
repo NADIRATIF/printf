@@ -61,19 +61,18 @@ int print_string(va_list types, char buffer[],
 			write(1, &str[0], length);
 			for (i = width - length; i > 0; i--)
 				write(1, " ", 1);
-OBOBOB			return (width);
+			return (width);
 		}
-OBOBOB		else
+		else
 		{
-OBOBOB			for (i = width - length; i > 0; i--)
-OBOBOB				write(1, " ", 1);
+			for (i = width - length; i > 0; i--)
+				write(1, " ", 1);
 			write(1, &str[0], length);
-OBOBOB			return (width);
+			return (width);
 		}
-OBOBOB	}
-
+	}
 	return (write(1, str, length));
-OBOBOB}
+}
 /************************* PRINT PERCENT SIGN *************************/
 /**
  * print_percent - Prints a percent sign
@@ -186,5 +185,3 @@ int print_binary(va_list types, char buffer[],
 	}
 	return (count);
 }
-
-
